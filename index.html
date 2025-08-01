@@ -1,14 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tailwind Starter</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">\
+  <link rel="stylesheet" href="./src/slick/slick.css">
   <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-center py-10">
-  <h1 class="text-4xl font-bold">Tailwind is working!</h1>
+
+<body>
+  <div class="site-wrapper">
+    <header class="site-header bg-white fixed w-100 top-0 left-0 right-0 py-6">
+      <div class="container">
+        <nav class="navbar flex flex-wrap justify-between items-center">
+          <div class="site-header__logo">
+            <a href="#">
+              <figure>
+                <img src="./src/images/logo.png" alt="logo">
+              </figure>
+            </a>
+          </div><!-- /.site-header__logo -->
+          <div
+            class="site-header__nav text-xl [&_ul]:flex [&_ul]:flex-wrap [&_ul]:items-center [&_li]:mx-5 [&_li:last-child]:!mr-0 [&_a]:border-b-2 [&_a]:border-transparent hover:[&_a]:border-primary [&_a]:transition-all [&_a]:duration-300">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Use Cases</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><button class="btn">Request a Quote</button></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="site-content mt-[111px]">
+      <section class="banner py-20">
+        <div class="container">
+          <div class="row items-center">
+            <div class="col basis-1/2">
+              <div class="max-w-[33.1875rem] [&_h1]:text-6xl [&_h1]:font-medium [&_h1]:leading-[1.25] [&_h1]:[text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] [&_h1]:mb-5">
+                <h1>Navigating the digital landscape for success</h1>
+                <p>Our digital marketing agency helps businesses grow and succeed online through a range of services
+                  including SEO, PPC, social media marketing, and content creation.</p>
+                <a href="#" class="btn btn-primary mt-6">Book a Consultation</a>
+              </div>
+            </div>
+            <div class="col basis-1/2">
+              <img src="./src/images/banner-image.png" alt="Banner Image">
+            </div>
+          </div>
+        </div><!-- /.container -->
+      </section><!-- /.banner -->
+      <section class="logo-block">
+        <div class="container">
+          <div class="slick logo-slider">
+            <div class="logo-slider__item">
+              <img src="./src/images/logo1.png" alt="Logo 1">
+            </div>
+            <div class="logo-slider__item">
+              <img src="./src/images/logo2.png" alt="Logo 2">
+            </div>
+            <div class="logo-slider__item">
+              <img src="./src/images/logo3.png" alt="Logo 3">
+            </div>
+            <div class="logo-slider__item">
+              <img src="./src/images/logo4.png" alt="Logo 4">
+            </div>
+            <div class="logo-slider__item">
+              <img src="./src/images/logo5.png" alt="Logo 5">
+            </div>
+            <div class="logo-slider__item">
+              <img src="./src/images/logo6.png" alt="Logo 6">
+            </div>
+          </div>
+        </div>
+      </section><!-- /.logo-slider -->
+      <section class="services">
+        <div class="container">
+          <div class="sevices-header">
+            <h2>Services</h2>
+            <p>At our digital marketing agency, we offer a range of services to help businesses grow and succeed online.
+              These services include:</p>
+          </div><!-- /.sevices-header -->
+          <div class="flex flex-wrap">
+            <div class="basis-1/2">
+              <div class="card-cta flex">
+                <div class="basis-1/2">
+                  <h3>Search engine optimization </h3>
+                  <a href="#"><i class="icon-slanted-arrow"></i>Learn More</a>
+                </div><!-- /.basis-1/2 -->
+                <div class="basis-1/2">
+                  <img src="./src/images/seo.png" alt="SEO Image">
+                </div><!-- /.basis-1/2 -->
+              </div>
+            </div><!-- /.basis-1/2 -->
+            <div class="basis-1/2">
+              <div class="card-cta flex">
+                <div class="basis-1/2">
+                  <h3>Pay-per-click advertising</h3>
+                  <a href="#"><i class="icon-slanted-arrow"></i>Learn More</a>
+                </div><!-- /.basis-1/2 -->
+                <div class="basis-1/2">
+                  <img src="./src/images/ppc.png" alt="PPC Image">
+                </div><!-- /.basis-1/2 -->
+              </div>
+            </div><!-- /.basis-1/2 -->
+            <div class="basis-1/2">
+              <div class="card-cta flex">
+                <div class="basis-1/2">
+                  <h3>Social media marketing</h3>
+                  <a href="#"><i class="icon-slanted-arrow"></i>Learn More</a>
+                </div><!-- /.basis-1/2 -->
+                <div class="basis-1/2">
+                  <img src="./src/images/social-media.png" alt="Social Media Image">
+                </div><!-- /.basis-1/2 -->
+              </div>
+            </div><!-- /.basis-1/2 -->
+            <div class="basis-1/2">
+              <div class="card-cta flex">
+                <div class="basis-1/2">
+                  <h3>Email marketing</h3>
+                  <a href="#"><i class="icon-slanted-arrow"></i>Learn More</a>
+                </div><!-- /.basis-1/2 -->
+                <div class="basis-1/2">
+                  <img src="./src/images/email-marketing.png" alt="Email Marketing Image">
+                </div><!-- /.basis-1/2 -->
+              </div>
+            </div><!-- /.basis-1/2 -->
+            <div class="basis-1/2">
+              <div class="card-cta flex">
+                <div class="basis-1/2">
+                  <h3>Content creation</h3>
+                  <a href="#"><i class="icon-slanted-arrow"></i>Learn More</a>
+                </div><!-- /.basis-1/2 -->
+                <div class="basis-1/2">
+                  <img src="./src/images/content-creation.png" alt="Content Creation Image">
+                </div><!-- /.basis-1/2 -->
+              </div>
+            </div><!-- /.basis-1/2 -->
+            <div class="basis-1/2">
+              <div class="card-cta flex">
+                <div class="basis-1/2">
+                  <h3>Analytics and Tracking</h3>
+                  <a href="#"><i class="icon-slanted-arrow"></i>Learn More</a>
+                </div><!-- /.basis-1/2 -->
+                <div class="basis-1/2">
+                  <img src="./src/images/analytics.png" alt="Analytics Image">
+                </div><!-- /.basis-1/2 -->
+              </div>
+            </div><!-- /.basis-1/2 -->
+          </div><!-- /.flex -->
+        </div><!-- /.container -->
+      </section><!-- /.services -->
+      <section class="cta-block">
+        <div class="container">
+          <div class="cta-block__content flex flex-wrap">
+            <div class="basis-1/2">
+              <h2>Let’s make things happen</h2>
+              <p>Contact us today to learn more about how our digital marketing services can help your business grow and
+                succeed online.</p>
+              <a href="#">Get your free proposal</a>
+            </div><!-- /.basis-1/2 -->
+            <div class="basis-1/2">
+              <img src="./src/images/cta-image.png" alt="CTA Image">
+            </div><!-- /.basis-1/2 -->
+          </div><!-- /.cta-block__content -->
+        </div>
+      </section>
+      <section class="study-block">
+        <div class="container">
+          <div class="study-header">
+            <h2>Case Studies</h2>
+            <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
+          </div><!-- /.study-header -->
+          <div class="slider">
+            <div class="slider__item">
+              <p>Learn how we helped a local business increase their online visibility and sales through targeted SEO
+                strategies.</p>
+              <a href="#">Learn more <i class="icon-slanted-arrow"></i></a>
+            </div><!-- /.slider__item -->
+            <div class="slider__item">
+              <p>Learn how we helped a local business increase their online visibility and sales through targeted SEO
+                strategies.</p>
+              <a href="#">Learn more <i class="icon-slanted-arrow"></i></a>
+            </div><!-- /.slider__item -->
+            <div class="slider__item">
+              <p>Learn how we helped a local business increase their online visibility and sales through targeted SEO
+                strategies.</p>
+              <a href="#">Learn more <i class="icon-slanted-arrow"></i></a>
+            </div><!-- /.slider__item -->
+          </div><!-- /.slider -->
+        </div><!-- /.container -->
+      </section><!-- /.study-block -->
+      <section class="process-block">
+        <div class="container">
+          <div class="process-header">
+            <h2>Case Studies</h2>
+            <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
+          </div><!-- /.process-header -->
+          <div class="accordion">
+            <div class="accordion-item active">
+              <button><span class="accordion-count"></span> Consultation <i class="accordion-icon"></i></button>
+              <div class="accordion-content">
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
+                  and current marketing efforts. This will allow us to understand your needs and tailor our services to
+                  best fit your requirements.</p>
+              </div><!-- /.accordion-content -->
+            </div><!-- /.accordion-item -->
+            <div class="accordion-item">
+              <button><span class="accordion-count"></span> Research and Strategy Development <i
+                  class="accordion-icon"></i></button>
+              <div class="accordion-content">
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
+                  and current marketing efforts. This will allow us to understand your needs and tailor our services to
+                  best fit your requirements.</p>
+              </div><!-- /.accordion-content -->
+            </div><!-- /.accordion-item -->
+            <div class="accordion-item">
+              <button><span class="accordion-count"></span> Implementation <i class="accordion-icon"></i></button>
+              <div class="accordion-content">
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
+                  and current marketing efforts. This will allow us to understand your needs and tailor our services to
+                  best fit your requirements.</p>
+              </div><!-- /.accordion-content -->
+            </div><!-- /.accordion-item -->
+            <div class="accordion-item">
+              <button><span class="accordion-count"></span> Monitoring and Optimization <i
+                  class="accordion-icon"></i></button>
+              <div class="accordion-content">
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
+                  and current marketing efforts. This will allow us to understand your needs and tailor our services to
+                  best fit your requirements.</p>
+              </div><!-- /.accordion-content -->
+            </div><!-- /.accordion-item -->
+            <div class="accordion-item">
+              <button><span class="accordion-count"></span> Reporting and Communication <i
+                  class="accordion-icon"></i></button>
+              <div class="accordion-content">
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
+                  and current marketing efforts. This will allow us to understand your needs and tailor our services to
+                  best fit your requirements.</p>
+              </div><!-- /.accordion-content -->
+            </div><!-- /.accordion-item -->
+            <div class="accordion-item">
+              <button><span class="accordion-count"></span> Continual Improvement <i
+                  class="accordion-icon"></i></button>
+              <div class="accordion-content">
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
+                  and current marketing efforts. This will allow us to understand your needs and tailor our services to
+                  best fit your requirements.</p>
+              </div><!-- /.accordion-content -->
+            </div><!-- /.accordion-item -->
+          </div><!-- /.accordion -->
+        </div><!-- /.container -->
+      </section><!-- /.process-block -->
+      <section class="team-block">
+        <div class="container">
+          <div class="team-header">
+            <h2>Meet Our Team</h2>
+            <p>Our team of experienced digital marketing professionals is dedicated to helping businesses succeed
+              online.
+              We have a diverse range of skills and expertise, allowing us to provide a comprehensive range of services
+              to our clients.</p>
+          </div><!-- /.team-header -->
+          <div class="team-content">
+            <div class="flex flex-wrap">
+              <div class="team-item">
+                <div class="team-item__top flex flex-wrap">
+                  <div class="team-item__image">
+                    <img src="./src/images/team-member1.jpg" alt="Team Member 1">
+                  </div><!-- /.team-item__image -->
+                  <div class="team-item__info">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                  </div><!-- /.team-item__info -->
+                  <a href="#" target="_blank"><i class="icon-linkedin"></i></a>
+                </div><!-- /.team-item__top -->
+                <div>
+                  <p>10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy</p>
+                </div>
+              </div><!-- /.team-item -->
+              <div class="team-item">
+                <div class="team-item__top flex flex-wrap">
+                  <div class="team-item__image">
+                    <img src="./src/images/team-member2.jpg" alt="Team Member 1">
+                  </div><!-- /.team-item__image -->
+                  <div class="team-item__info">
+                    <h3>Jane Doe</h3>
+                    <p>Director of Operations</p>
+                  </div><!-- /.team-item__info -->
+                  <a href="#" target="_blank"><i class="icon-linkedin"></i></a>
+                </div><!-- /.team-item__top -->
+                <div>
+                  <p>7+ years of experience in project management and team leadership. Strong organizational and
+                    communication skills</p>
+                </div>
+              </div><!-- /.team-item -->
+              <div class="team-item">
+                <div class="team-item__top flex flex-wrap">
+                  <div class="team-item__image">
+                    <img src="./src/images/team-member3.jpg" alt="Team Member 1">
+                  </div><!-- /.team-item__image -->
+                  <div class="team-item__info">
+                    <h3>Michael Brown</h3>
+                    <p>Senior SEO Specialist</p>
+                  </div><!-- /.team-item__info -->
+                  <a href="#" target="_blank"><i class="icon-linkedin"></i></a>
+                </div><!-- /.team-item__top -->
+                <div>
+                  <p>5+ years of experience in SEO and content creation. Proficient in keyword research and on-page
+                    optimization</p>
+                </div>
+              </div><!-- /.team-item -->
+              <div class="team-item">
+                <div class="team-item__top flex flex-wrap">
+                  <div class="team-item__image">
+                    <img src="./src/images/team-member4.jpg" alt="Team Member 1">
+                  </div><!-- /.team-item__image -->
+                  <div class="team-item__info">
+                    <h3>Emily Johnson</h3>
+                    <p>PPC Manager</p>
+                  </div><!-- /.team-item__info -->
+                  <a href="#" target="_blank"><i class="icon-linkedin"></i></a>
+                </div><!-- /.team-item__top -->
+                <div>
+                  <p>3+ years of experience in paid search advertising. Skilled in campaign management and performance
+                    analysis</p>
+                </div>
+              </div><!-- /.team-item -->
+              <div class="team-item">
+                <div class="team-item__top flex flex-wrap">
+                  <div class="team-item__image">
+                    <img src="./src/images/team-member5.jpg" alt="Team Member 1">
+                  </div><!-- /.team-item__image -->
+                  <div class="team-item__info">
+                    <h3>Brian Williams</h3>
+                    <p>Social Media Specialist</p>
+                  </div><!-- /.team-item__info -->
+                  <a href="#" target="_blank"><i class="icon-linkedin"></i></a>
+                </div><!-- /.team-item__top -->
+                <div>
+                  <p>4+ years of experience in social media marketing. Proficient in creating and scheduling content,
+                    analyzing metrics, and building engagement</p>
+                </div>
+              </div><!-- /.team-item -->
+              <div class="team-item">
+                <div class="team-item__top flex flex-wrap">
+                  <div class="team-item__image">
+                    <img src="./src/images/team-member6.jpg" alt="Team Member 1">
+                  </div><!-- /.team-item__image -->
+                  <div class="team-item__info">
+                    <h3>Sarah Kim</h3>
+                    <p>Content Creator</p>
+                  </div><!-- /.team-item__info -->
+                  <a href="#" target="_blank"><i class="icon-linkedin"></i></a>
+                </div><!-- /.team-item__top -->
+                <div>
+                  <p>2+ years of experience in writing and editing
+                    Skilled in creating compelling, SEO-optimized content for various industries</p>
+                </div>
+              </div><!-- /.team-item -->
+            </div><!-- /.flex -->
+          </div><!-- /.team-content -->
+          <div>
+            <a href="#" class="">See all team</a>
+          </div>
+        </div><!-- /.container -->
+      </section><!-- /.team-block -->
+    </main>
+    <footer class="site-footer">
+
+    </footer>
+    <script src="./src/jquery.min.js"></script>
+    <script src="./src/slick/slick.min.js"></script>
+    <script src="./src/main.js"></script>
+  </div>
 </body>
+
 </html>

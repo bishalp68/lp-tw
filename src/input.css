@@ -4,6 +4,40 @@
 
 @layer base {
     body {
-        @apply font-space;
+        @apply font-space min-w-[320px] text-[1.125rem] leading-[1.35];
+    }
+
+    .container {
+        @apply !max-w-[1280px] px-4 mx-auto;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply bg-white text-xl min-w-60 py-4 px-5 text-center inline-flex justify-center items-center border border-black rounded-xl transition-all hover:bg-primary hover:text-black;
+    }
+
+    .btn-primary {
+        @apply bg-secondary text-white;
+    }
+
+    .row {
+        @apply flex flex-wrap -mx-4;
+    }
+
+    .col {
+        @apply px-4;
+    }
+
+    .slick-slider {
+        @apply px-10;
+    }
+
+    .slick-track {
+        @apply flex items-center -mx-3;
+    }
+
+    .slick-slide {
+        @apply flex-shrink-0 border border-black rounded-xl overflow-hidden p-4 mx-3;
     }
 }
