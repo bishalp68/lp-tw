@@ -10,9 +10,27 @@
     .container {
         @apply !max-w-[1280px] px-4 mx-auto;
     }
+
+    h1,h2,h3,h4,h5,h6 {
+        @apply font-medium;
+    }
+
+    h1 {
+        @apply text-6xl;
+    }
+
+    h2 {
+        @apply text-[2.5rem];
+    }
+
+    h3 {
+        @apply text-3xl;
+    }
 }
 
 @layer components {
+
+    /* Buttons */
     .btn {
         @apply bg-white text-xl min-w-60 py-4 px-5 text-center inline-flex justify-center items-center border border-black rounded-xl transition-all hover:bg-primary hover:text-black;
     }
@@ -21,6 +39,7 @@
         @apply bg-secondary text-white;
     }
 
+    /* Flex */
     .row {
         @apply flex flex-wrap -mx-4;
     }
@@ -29,8 +48,9 @@
         @apply px-4;
     }
 
+    /* Slick Slider */
     .slick-slider {
-        @apply px-10;
+        @apply px-10 relative;
     }
 
     .slick-track {
@@ -39,5 +59,36 @@
 
     .slick-slide {
         @apply flex-shrink-0 border border-black rounded-xl overflow-hidden p-4 mx-3;
+    }
+
+    .slick-prev, .slick-next {
+        @apply absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white text-black rounded-full flex items-center justify-center;
+    }
+
+    .slick-prev {
+        @apply left-0;
+    } 
+
+    .slick-next {
+        @apply right-0;
+    }
+
+    /* Headings */
+    .inline-heading {
+        @apply flex items-center [&_h2]:inline-block [&_h2]:bg-primary [&_h2]:mr-10 mb-11;
+    }
+
+    /* Cards */
+
+    .card-cta {
+        @apply bg-tertiary border border-black rounded-[2.8125rem] h-full p-12 shadow-[0_5px_0_0_#191A23] [&_h3]:mb-4 [&_h3]:text-[1.875rem] [&_h3_span]:inline-block [&_h3_span]:bg-primary [&_h3_span]:p-1 [&_h3_span]:rounded-lg transition-all [&_h3_span]:transition-all hover:bg-primary [&:hover_h3_span]:bg-white;
+    }
+
+    .card-cta__content {
+        @apply flex flex-col h-full;
+    }
+
+    .card-cta a {
+        @apply inline-flex items-center mt-auto [&_svg]:bg-black [&_svg]:text-primary [&_svg]:rounded-full [&_svg]:p-2 [&_svg]:w-10 [&_svg]:h-10 [&_svg]:mr-2;
     }
 }
