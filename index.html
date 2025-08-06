@@ -58,7 +58,7 @@
       </section><!-- /.banner -->
       <section class="logo-block py-12">
         <div class="container">
-          <div class="slick logo-slider">
+          <div class="slick logo-slider [&_.slick-arrow]:!hidden px-0 [&_.slick-slide]:border-0 [&_.slick-slide]:mx-0 [&_img]:mx-auto [&_img]:grayscale hover:[&_img]:grayscale-0 [&_img]:transition-all [&_img]:duration-200">
             <div class="logo-slider__item">
               <img src="./src/images/logo1.png" alt="Logo 1">
             </div>
@@ -76,6 +76,9 @@
             </div>
             <div class="logo-slider__item">
               <img src="./src/images/logo6.png" alt="Logo 6">
+            </div>
+             <div class="logo-slider__item">
+              <img src="./src/images/logo3.png" alt="Logo 1">
             </div>
           </div>
         </div>
@@ -163,7 +166,7 @@
             <div class="col basis-1/2">
               <div class="card-cta flex">
                 <div class="card-cta__content basis-1/2">
-                  <h3><span>Analytics and</span><br>  <span>Tracking</span></h3>
+                  <h3><span>Analytics and</span><br> <span>Tracking</span></h3>
                   <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                       stroke="currentColor" class="size-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
@@ -177,55 +180,64 @@
           </div><!-- /.flex -->
         </div><!-- /.container -->
       </section><!-- /.services -->
-      <section class="cta-block">
+      <section class="cta-block py-8">
         <div class="container">
-          <div class="cta-block__content flex flex-wrap">
+          <div class="cta-block__content flex flex-wrap items-center bg-tertiary px-14 rounded-[2.8125rem] [&_h2]:mb-6">
             <div class="basis-1/2">
-              <h2>Let’s make things happen</h2>
-              <p>Contact us today to learn more about how our digital marketing services can help your business grow and
-                succeed online.</p>
-              <a href="#">Get your free proposal</a>
+              <div class="max-w-[33.25rem] text-xl py-9">
+                <h2>Let’s make things happen</h2>
+                <p>Contact us today to learn more about how our digital marketing services can help your business grow
+                  and
+                  succeed online.</p>
+                <a href="#" class="btn btn-primary mt-6">Get your free proposal</a>
+              </div>
             </div><!-- /.basis-1/2 -->
-            <div class="basis-1/2">
+            <div class="basis-1/2 text-center [&_img]:mx-auto -my-5">
               <img src="./src/images/cta-image.png" alt="CTA Image">
             </div><!-- /.basis-1/2 -->
           </div><!-- /.cta-block__content -->
         </div>
-      </section>
-      <section class="study-block">
+      </section><!-- /.cta-block -->
+      <section class="study-block py-16">
         <div class="container">
-          <div class="study-header">
+          <div class="study-header inline-heading">
             <h2>Case Studies</h2>
-            <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
+            <p>Explore Real-Life Examples of Our Proven Digital Marketing <br> Success through Our Case Studies</p>
           </div><!-- /.study-header -->
-          <div class="slider">
+          <div class="slider cta-slider rounded-[2.8125rem] overflow-hidden py-16 px-0 bg-secondary [&_.slick-slide]:rounded-none [&_.slick-slide]:border-0 text-white [&_.slick-slide]:mx-0 [&_.slick-slide]:px-14 [&_.slick-slide]:border-r-2 [&_.slick-slide]:border-white [&_.slick-slide]:border-solid [&_.slick-slide]:-mr-[2px] [&_a]:inline-flex [&_a]:items-center [&_a]:text-primary [&_a_svg]:ml-1 [&_a_svg]:transition-all [&_a]:mt-6 [&_a:hover_svg]:rotate-45">
             <div class="slider__item">
-              <p>Learn how we helped a local business increase their online visibility and sales through targeted SEO
-                strategies.</p>
-              <a href="#">Learn more <i class="icon-slanted-arrow"></i></a>
+              <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.</p>
+              <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg></a>
             </div><!-- /.slider__item -->
             <div class="slider__item">
-              <p>Learn how we helped a local business increase their online visibility and sales through targeted SEO
-                strategies.</p>
-              <a href="#">Learn more <i class="icon-slanted-arrow"></i></a>
+              <p>For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.</p>
+              <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg></a>
             </div><!-- /.slider__item -->
             <div class="slider__item">
-              <p>Learn how we helped a local business increase their online visibility and sales through targeted SEO
-                strategies.</p>
-              <a href="#">Learn more <i class="icon-slanted-arrow"></i></a>
+              <p>For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.</p>
+              <a href="#">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg></a>
             </div><!-- /.slider__item -->
           </div><!-- /.slider -->
         </div><!-- /.container -->
       </section><!-- /.study-block -->
-      <section class="process-block">
+      <section class="process-block py-16">
         <div class="container">
-          <div class="process-header">
-            <h2>Case Studies</h2>
-            <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
+          <div class="process-header inline-heading">
+            <h2>Our Working Process </h2>
+            <p>Step-by-Step Guide to Achieving <br> Your Business Goals</p>
           </div><!-- /.process-header -->
           <div class="accordion">
             <div class="accordion-item active">
-              <button><span class="accordion-count"></span> Consultation <i class="accordion-icon"></i></button>
+              <button class="accordion-header"><span class="accordion-count"></span> Consultation <i class="accordion-icon"></i></button>
               <div class="accordion-content">
                 <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
                   and current marketing efforts. This will allow us to understand your needs and tailor our services to
@@ -233,7 +245,7 @@
               </div><!-- /.accordion-content -->
             </div><!-- /.accordion-item -->
             <div class="accordion-item">
-              <button><span class="accordion-count"></span> Research and Strategy Development <i
+              <button class="accordion-header"><span class="accordion-count"></span> Research and Strategy Development <i
                   class="accordion-icon"></i></button>
               <div class="accordion-content">
                 <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
@@ -242,7 +254,7 @@
               </div><!-- /.accordion-content -->
             </div><!-- /.accordion-item -->
             <div class="accordion-item">
-              <button><span class="accordion-count"></span> Implementation <i class="accordion-icon"></i></button>
+              <button class="accordion-header"><span class="accordion-count"></span> Implementation <i class="accordion-icon"></i></button>
               <div class="accordion-content">
                 <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
                   and current marketing efforts. This will allow us to understand your needs and tailor our services to
@@ -250,7 +262,7 @@
               </div><!-- /.accordion-content -->
             </div><!-- /.accordion-item -->
             <div class="accordion-item">
-              <button><span class="accordion-count"></span> Monitoring and Optimization <i
+              <button class="accordion-header"><span class="accordion-count"></span> Monitoring and Optimization <i
                   class="accordion-icon"></i></button>
               <div class="accordion-content">
                 <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
@@ -259,7 +271,7 @@
               </div><!-- /.accordion-content -->
             </div><!-- /.accordion-item -->
             <div class="accordion-item">
-              <button><span class="accordion-count"></span> Reporting and Communication <i
+              <button class="accordion-header"><span class="accordion-count"></span> Reporting and Communication <i
                   class="accordion-icon"></i></button>
               <div class="accordion-content">
                 <p>During the initial consultation, we will discuss your business goals and objectives, target audience,
@@ -268,7 +280,7 @@
               </div><!-- /.accordion-content -->
             </div><!-- /.accordion-item -->
             <div class="accordion-item">
-              <button><span class="accordion-count"></span> Continual Improvement <i
+              <button class="accordion-header"><span class="accordion-count"></span> Continual Improvement <i
                   class="accordion-icon"></i></button>
               <div class="accordion-content">
                 <p>During the initial consultation, we will discuss your business goals and objectives, target audience,

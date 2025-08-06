@@ -11,7 +11,12 @@
         @apply !max-w-[1280px] px-4 mx-auto;
     }
 
-    h1,h2,h3,h4,h5,h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @apply font-medium;
     }
 
@@ -54,20 +59,29 @@
     }
 
     .slick-track {
-        @apply flex items-center -mx-3;
+        @apply flex items-center;
     }
 
     .slick-slide {
         @apply flex-shrink-0 border border-black rounded-xl overflow-hidden p-4 mx-3;
     }
 
-    .slick-prev, .slick-next {
-        @apply absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white text-black rounded-full flex items-center justify-center;
+    .slick-prev,
+    .slick-next {
+        @apply absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white text-black rounded-full flex items-center justify-center text-[0];
+    }
+
+    .slick-arrow::before {
+        @apply content-[''] border-black border-t-2 border-r-2 w-4 h-4 rotate-45;
+    }
+
+    .slick-arrow::after {
+        @apply content-[''] border-black border-t-2 w-5 absolute left-2.5;
     }
 
     .slick-prev {
-        @apply left-0;
-    } 
+        @apply left-0 rotate-180 -translate-y-[50%];
+    }
 
     .slick-next {
         @apply right-0;
@@ -75,7 +89,7 @@
 
     /* Headings */
     .inline-heading {
-        @apply flex items-center [&_h2]:inline-block [&_h2]:bg-primary [&_h2]:mr-10 mb-11;
+        @apply flex items-center [&_h2]:inline-block [&_h2]:bg-primary [&_h2]:p-1.5 [&_h2]:rounded-lg [&_h2]:leading-[1] [&_h2]:mr-10 mb-11;
     }
 
     /* Cards */
@@ -90,5 +104,48 @@
 
     .card-cta a {
         @apply inline-flex items-center mt-auto [&_svg]:bg-black [&_svg]:text-primary [&_svg]:rounded-full [&_svg]:p-2 [&_svg]:w-10 [&_svg]:h-10 [&_svg]:mr-2;
+    }
+
+    /* Accordion */
+    .accordion {
+        counter-reset: list-counter;
+    }
+
+    .accordion-count {
+        counter-increment: list-counter;
+        @apply text-[3.75rem] text-black font-medium mr-4;
+    }
+
+    .accordion-count:before {
+        content: counter(list-counter, decimal-leading-zero);
+    }
+
+    .accordion-item {
+        @apply border border-black rounded-[2.8125rem] overflow-hidden shadow-[0_5px_0_0_#191A23] mb-7 py-10 px-14;
+    }
+
+    .accordion-item.active {
+        @apply bg-primary [&_.accordion-icon]:after:rotate-0;
+    }
+
+    .accordion-content {
+        @apply pt-7 border-t border-black hidden;
+    }
+
+    .accordion-header {
+        @apply text-[1.875rem] text-black font-medium flex items-center w-full mb-2 pr-20 relative;
+    }
+
+    .accordion-icon {
+        @apply w-14 h-14 absolute right-0 top-1/2 -translate-y-1/2 border border-black rounded-full;
+    }
+
+    .accordion-icon:before,
+    .accordion-icon:after {
+        @apply content-[''] w-4 border-t-4 border-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all;
+    }
+
+    .accordion-icon:after {
+        @apply rotate-90;
     }
 }
