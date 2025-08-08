@@ -16,15 +16,32 @@ $(document).ready(() => {
         slidesToShow: 3,
     });
 
+    $('.testimonial-slider').slick({
+        slidesToShow: 3,  
+        dots: true,  
+    });
+
     //accordion
     $(".accordion").on("click", ".accordion-header", function () {
+        var $header = $(this);
+        var $content = $header.next(".accordion-content");
 
-        $(this).parent().toggleClass("active");
-        $(this).toggleClass("active").next().slideToggle();
+        // If this section is already open
+        if ($content.is(":visible")) {
+            $content.slideUp(300);
+            $header.removeClass("active");
+            $header.parent().removeClass("active");
+        } else {
+            // Close all sections
+            $(".accordion .accordion-content").slideUp(300);
+            $(".accordion .accordion-header").removeClass("active");
+            $(".accordion .accordion-item").removeClass("active");
 
-        $(".accordion-content").not($(this).next()).slideUp(300);
-
-        $(this).siblings().removeClass("active");
+            // Open the clicked section
+            $content.slideDown(300);
+            $header.addClass("active");
+            $header.parent().addClass("active");
+        }
     });
 
 });

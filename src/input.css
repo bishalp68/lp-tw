@@ -94,6 +94,7 @@
 
     /* Cards */
 
+    /* Card CTA */
     .card-cta {
         @apply bg-tertiary border border-black rounded-[2.8125rem] h-full p-12 shadow-[0_5px_0_0_#191A23] [&_h3]:mb-4 [&_h3]:text-[1.875rem] [&_h3_span]:inline-block [&_h3_span]:bg-primary [&_h3_span]:p-1 [&_h3_span]:rounded-lg transition-all [&_h3_span]:transition-all hover:bg-primary [&:hover_h3_span]:bg-white;
     }
@@ -104,6 +105,33 @@
 
     .card-cta a {
         @apply inline-flex items-center mt-auto [&_svg]:bg-black [&_svg]:text-primary [&_svg]:rounded-full [&_svg]:p-2 [&_svg]:w-10 [&_svg]:h-10 [&_svg]:mr-2;
+    }
+
+    /* Card Team */
+    .card-team {
+        @apply border border-black rounded-[2.8125rem] overflow-hidden relative shadow-[0_5px_0_0_#191A23] mb-7 py-10 px-9 h-full;
+    }
+
+    .card-team__top {
+        @apply flex items-end [&_h3]:text-[1.25rem] relative [&_a]:absolute [&_a]:right-0 [&_a]:top-0 [&_a]:text-primary [&_a]:text-[1.125rem] [&_a]:bg-black [&_a]:p-2 [&_a]:rounded-full [&_a]:transition-all;
+    }
+
+    .card-team__image {
+        @apply mr-5 [&_img]:max-w-[6.625rem] [&_img]:max-h-[6.625rem];
+    }
+
+    .card-team__info {
+        @apply pr-9;
+    }
+
+    .card-team__content {
+        @apply pt-7 mt-7 border-t border-black;
+    }
+
+    /* Card Testimonial */
+
+    .card-testimonial__top {
+        @apply border border-primary rounded-[2.8125rem] text-white p-11;
     }
 
     /* Accordion */
@@ -121,11 +149,11 @@
     }
 
     .accordion-item {
-        @apply border border-black rounded-[2.8125rem] overflow-hidden shadow-[0_5px_0_0_#191A23] mb-7 py-10 px-14;
+        @apply border border-black rounded-[2.8125rem] overflow-hidden relative shadow-[0_5px_0_0_#191A23] mb-7 py-10 px-14;
     }
 
     .accordion-item.active {
-        @apply bg-primary [&_.accordion-icon]:after:rotate-0;
+        @apply bg-primary [&_.accordion-icon]:after:rotate-0 [&_.accordion-content]:block;
     }
 
     .accordion-content {
@@ -133,11 +161,11 @@
     }
 
     .accordion-header {
-        @apply text-[1.875rem] text-black font-medium flex items-center w-full mb-2 pr-20 relative;
+        @apply text-[1.875rem] text-black font-medium flex items-center w-full mb-2 pr-20 after:content-[''] after:inset-0 after:absolute after:z-10;
     }
 
     .accordion-icon {
-        @apply w-14 h-14 absolute right-0 top-1/2 -translate-y-1/2 border border-black rounded-full;
+        @apply w-14 h-14 absolute right-14 top-[3.25rem] border border-black rounded-full;
     }
 
     .accordion-icon:before,
