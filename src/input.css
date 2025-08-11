@@ -53,6 +53,11 @@
         @apply px-4;
     }
 
+    /*header */
+    .sticky-header {
+        @apply shadow-lg;
+    }
+
     /* Slick Slider */
     .slick-slider {
         @apply px-10 relative;
@@ -85,6 +90,14 @@
 
     .slick-next {
         @apply right-0;
+    }
+
+    .slick-dots {
+        @apply text-center mt-16 [&_li]:inline-block [&_li]:mx-1.5 [&_.slick-active_button]:border-b-primary [&_.slick-active_button]:before:border-b-primary [&_.slick-active_button]:after:border-b-primary;
+    }
+
+    .slick-dots button {
+        @apply relative mx-auto w-0 h-0 border-x-[10px] border-x-transparent border-b-[7px] border-b-white rotate-[35deg] before:content-[''] before:absolute before:top-[-4.5px] before:left-[-6.5px] before:w-0 before:h-0 before:border-x-[3px] before:border-x-transparent before:border-b-[8px] before:border-b-white before:rotate-[-35deg] after:content-[''] after:absolute after:top-[0.3px] after:left-[-10.5px] after:w-0 after:h-0 after:border-x-[10px] after:border-x-transparent after:border-b-[7px] after:border-b-white after:rotate-[-70deg];
     }
 
     /* Headings */
@@ -130,8 +143,17 @@
 
     /* Card Testimonial */
 
+    .card-testimonial__top:after,
+    .card-testimonial__top:before {
+        @apply content-[''] absolute bg-primary w-8 h-8 rotate-45 top-full -mt-4;
+    }
+
     .card-testimonial__top {
-        @apply border border-primary rounded-[2.8125rem] text-white p-11;
+        @apply border border-primary rounded-[2.8125rem] text-white p-11 relative bg-black before:bg-black before:border-0 before:-mt-[1.0625rem] before:z-10 mb-10;
+    }
+
+    .card-testimonial__bottom {
+        @apply text-white ml-[3.75rem] [&_h5]:text-primary;
     }
 
     /* Accordion */
@@ -175,5 +197,60 @@
 
     .accordion-icon:after {
         @apply rotate-90;
+    }
+
+    /* Contact Form */
+
+    .contact-form .form-group {
+        @apply mb-4 [&_label]:block [&_label]:mb-2;
+    }
+
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+        @apply w-full h-[3.6875rem] rounded-[0.875rem] border border-black py-3 px-7;
+    }
+
+    .contact-form .form-group textarea {
+        @apply min-h-[11.875rem] resize-none;
+    }
+
+    .contact-form .form-radio {
+        @apply mb-8 [&_li]:inline-block [&_li]:mr-6;
+    }
+
+    /* Hide native radio */
+    .contact-form input[type="radio"]:checked,
+    .contact-form input[type="radio"]:not(:checked) {
+        @apply absolute -left-[9999px];
+    }
+
+    /* Label styling */
+    .contact-form input[type="radio"]:checked+label,
+    .contact-form input[type="radio"]:not(:checked)+label {
+        @apply relative pl-[2.5rem] cursor-pointer leading-5 inline-block text-gray-600;
+    }
+
+    /* Outer circle */
+    .contact-form input[type="radio"]:checked+label::before,
+    .contact-form input[type="radio"]:not(:checked)+label::before {
+        content: '';
+        @apply absolute left-0 -top-[0.125rem] w-[1.75rem] h-[1.75rem] border border-black rounded-full;
+    }
+
+    /* Inner dot base style */
+    .contact-form input[type="radio"]:checked+label::after,
+    .contact-form input[type="radio"]:not(:checked)+label::after {
+        content: '';
+        @apply w-4 h-4 bg-primary absolute top-1 left-1.5 rounded-full transition-all duration-200 ease-in-out;
+    }
+
+    /* Hidden dot when not checked */
+    .contact-form input[type="radio"]:not(:checked)+label::after {
+        @apply opacity-0 scale-0;
+    }
+
+    /* Visible dot when checked */
+    .contact-form input[type="radio"]:checked+label::after {
+        @apply opacity-100 scale-100;
     }
 }

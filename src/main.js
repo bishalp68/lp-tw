@@ -17,8 +17,8 @@ $(document).ready(() => {
     });
 
     $('.testimonial-slider').slick({
-        slidesToShow: 3,  
-        dots: true,  
+        slidesToShow: 3,
+        dots: true,
     });
 
     //accordion
@@ -44,4 +44,30 @@ $(document).ready(() => {
         }
     });
 
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+    const siteContent = document.querySelector(".site-content");
+
+    function adjustContentMargin() {
+        if (header && siteContent) {
+            const headerHeight = header.offsetHeight;
+            siteContent.style.marginTop = headerHeight + "px";
+        }
+    }
+
+    function handleScroll() {
+        if (window.scrollY >= 100) {
+            header.classList.add("sticky-header");
+        } else {
+            header.classList.remove("sticky-header");
+        }
+    }
+
+    adjustContentMargin();
+    handleScroll();
+
+    window.addEventListener("resize", adjustContentMargin);
+    window.addEventListener("scroll", handleScroll);
 });
