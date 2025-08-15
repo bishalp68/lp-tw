@@ -31,6 +31,10 @@
     h3 {
         @apply text-3xl;
     }
+
+    a {
+        @apply transition-all duration-200 ease-in-out;
+    }
 }
 
 @layer components {
