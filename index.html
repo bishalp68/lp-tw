@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tailwind Starter</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">\
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/slick/slick.css">
   <link href="./dist/output.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="site-wrapper">
-    <header class="site-header bg-white fixed z-[1000] w-100 top-0 left-0 right-0 py-6">
+    <header class="site-header bg-white fixed z-[1000] w-100 top-0 left-0 right-0 py-4 md:py-6">
       <div class="container">
         <nav class="navbar flex flex-wrap justify-between items-center">
-          <div class="site-header__logo">
+          <div class="site-header__logo max-w-[8rem] md:max-w-[11.25rem] xl:max-w-[12.5rem] 2xl:max-w-[13.75rem] mr-4">
             <a href="#">
               <figure>
                 <img src="./src/images/logo.png" alt="logo">
@@ -24,7 +24,7 @@
             </a>
           </div><!-- /.site-header__logo -->
           <div
-            class="site-header__nav text-xl [&_ul]:flex [&_ul]:flex-wrap [&_ul]:items-center [&_li]:mx-5 [&_li:last-child]:!mr-0 [&_a]:border-b-2 [&_a]:border-transparent hover:[&_a]:border-black [&_a]:transition-all [&_a]:duration-300">
+            class="site-header__nav text-[1rem] xl:text-[1.125rem] 2xl:text-[1.25rem] lg:[&_ul]:flex lg:[&_ul]:flex-wrap lg:[&_ul]:items-center lg:[&_li]:mx-3 xl:[&_li]:mx-4 2xl:[&_li]:mx-5 [&_li:last-child]:!mr-0 [&_a]:border-b-2 [&_a]:border-transparent hover:[&_a]:border-black [&_a]:transition-all [&_a]:duration-300">
             <ul>
               <li><a href="#">About Us</a></li>
               <li><a href="#">Services</a></li>
@@ -38,25 +38,25 @@
       </div>
     </header>
     <main class="site-content">
-      <section class="banner py-20">
+      <section class="banner py-4 md:py-8 lg:py-12 xl:py-16 2xl:py-20">
         <div class="container">
           <div class="row items-center">
-            <div class="col basis-1/2">
+            <div class="col basis-full md:basis-1/2 order-2 md:order-1">
               <div
-                class="max-w-[33.1875rem] [&_h1]:text-6xl [&_h1]:font-medium [&_h1]:leading-[1.25] [&_h1]:[text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] [&_h1]:mb-5">
+                class="max-w-[25.25rem] md:max-w-[33.1875rem] [&_h1]:font-bold [&_h1]:leading-[1.25] [&_h1]:[text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] [&_h1]:mb-5 max-md:text-center max-md:mx-auto">
                 <h1>Navigating the digital landscape for success</h1>
                 <p>Our digital marketing agency helps businesses grow and succeed online through a range of services
                   including SEO, PPC, social media marketing, and content creation.</p>
                 <a href="#" class="btn btn-primary mt-6">Book a Consultation</a>
               </div>
             </div>
-            <div class="col basis-1/2">
+            <div class="col basis-full md:basis-1/2 order-1 md:order-2 max-md:max-w-[21.875rem] max-md:mx-auto">
               <img src="./src/images/banner-image.png" alt="Banner Image">
             </div>
           </div>
         </div><!-- /.container -->
       </section><!-- /.banner -->
-      <section class="logo-block py-12">
+      <section class="logo-block py-4 lg:py-8 2xl:py-12">
         <div class="container">
           <div
             class="slick logo-slider [&_.slick-arrow]:!hidden px-0 [&_.slick-slide]:border-0 [&_.slick-slide]:mx-0 [&_img]:mx-auto [&_img]:grayscale hover:[&_img]:grayscale-0 [&_img]:transition-all [&_img]:duration-200">
@@ -84,7 +84,7 @@
           </div>
         </div>
       </section><!-- /.logo-slider -->
-      <section class="services py-16">
+      <section class="services py-8 xl:py-12 2xl:py-16">
         <div class="container">
           <div class="inline-heading">
             <h2>Services</h2>
@@ -92,7 +92,7 @@
               online.
               These services include:</p>
           </div><!-- /.sevices-header -->
-          <div class="row [&_.col]:mb-8">
+          <div class="row [&_.col]:mb-6 lg:[&_.col]:mb-8">
             <div class="col basis-1/2">
               <div class="card-cta flex">
                 <div class="card-cta__content basis-1/2">
@@ -183,9 +183,9 @@
       </section><!-- /.services -->
       <section class="cta-block py-8">
         <div class="container">
-          <div class="cta-block__content flex flex-wrap items-center bg-tertiary px-14 rounded-[2.8125rem] [&_h2]:mb-6">
-            <div class="basis-1/2">
-              <div class="max-w-[33.25rem] text-xl py-9">
+          <div class="cta-block__content row items-center bg-tertiary px-7 lg:px-14 rounded-[2.125rem] lg:rounded-[2.8125rem] [&_h2]:mb-6">
+            <div class="col basis-1/2">
+              <div class="max-w-[33.25rem] xl:text-xl py-9">
                 <h2>Let’s make things happen</h2>
                 <p>Contact us today to learn more about how our digital marketing services can help your business grow
                   and
@@ -193,20 +193,20 @@
                 <a href="#" class="btn btn-primary mt-6">Get your free proposal</a>
               </div>
             </div><!-- /.basis-1/2 -->
-            <div class="basis-1/2 text-center [&_img]:mx-auto -my-5">
+            <div class="col basis-1/2 text-center [&_img]:mx-auto -my-5">
               <img src="./src/images/cta-image.png" alt="CTA Image">
             </div><!-- /.basis-1/2 -->
           </div><!-- /.cta-block__content -->
         </div>
       </section><!-- /.cta-block -->
-      <section class="study-block py-16">
+      <section class="study-block py-8 xl:py-12 2xl:py-16">
         <div class="container">
           <div class="inline-heading">
             <h2>Case Studies</h2>
             <p>Explore Real-Life Examples of Our Proven Digital Marketing <br> Success through Our Case Studies</p>
           </div><!-- /.study-header -->
           <div
-            class="slider cta-slider rounded-[2.8125rem] overflow-hidden py-16 px-0 bg-secondary [&_.slick-slide]:rounded-none [&_.slick-slide]:border-0 text-white [&_.slick-slide]:mx-0 [&_.slick-slide]:px-14 [&_.slick-slide]:border-r-2 [&_.slick-slide]:border-white [&_.slick-slide]:border-solid [&_.slick-slide]:-mr-[2px] [&_a]:inline-flex [&_a]:items-center [&_a]:text-primary [&_a_svg]:ml-1 [&_a_svg]:transition-all [&_a]:mt-6 [&_a:hover_svg]:rotate-45">
+            class="slider cta-slider rounded-[1.875rem] xl:rounded-[2.8125rem] overflow-hidden py-8 xl:py-12 2xl:py-16 px-0 bg-secondary [&_.slick-slide]:rounded-none [&_.slick-slide]:border-0 text-white [&_.slick-slide]:mx-0 [&_.slick-slide]:px-10 xl:[&_.slick-slide]:px-14 [&_.slick-slide]:border-r-2 [&_.slick-slide]:border-white [&_.slick-slide]:border-solid [&_.slick-slide]:-mr-[2px] [&_a]:inline-flex [&_a]:items-center [&_a]:text-primary [&_a_svg]:ml-1 [&_a_svg]:transition-all [&_a]:mt-6 [&_a:hover_svg]:rotate-45">
             <div class="slider__item">
               <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in
                 website traffic and a 25% increase in sales.</p>
@@ -234,9 +234,9 @@
           </div><!-- /.slider -->
         </div><!-- /.container -->
       </section><!-- /.study-block -->
-      <section class="process-block py-16">
+      <section class="process-block py-8 xl:py-12 2xl:py-16">
         <div class="container">
-          <div class="inline-heading mb-20">
+          <div class="inline-heading mb-12 2xl:mb-20">
             <h2>Our Working Process </h2>
             <p>Step-by-Step Guide to Achieving <br> Your Business Goals</p>
           </div><!-- /.process-header -->
@@ -298,7 +298,7 @@
           </div><!-- /.accordion -->
         </div><!-- /.container -->
       </section><!-- /.process-block -->
-      <section class="team-block py-12">
+      <section class="team-block py-6 lg:py-12">
         <div class="container">
           <div class="inline-heading">
             <h2>Team</h2>
@@ -306,7 +306,7 @@
           </div><!-- /.team-header -->
           <div class="team-content">
             <div class="row [&_.col]:mb-8">
-              <div class="col basis-1/3">
+              <div class="col basis-1/2 lg:basis-1/3">
                 <div class="card-team">
                   <div class="card-team__top">
                     <div class="card-team__image">
@@ -328,7 +328,7 @@
                   </div>
                 </div><!-- /.card-team -->
               </div>
-              <div class="col basis-1/3">
+              <div class="col basis-1/2 lg:basis-1/3">
                 <div class="card-team">
                   <div class="card-team__top">
                     <div class="card-team__image">
@@ -350,7 +350,7 @@
                   </div>
                 </div><!-- /.card-team -->
               </div>
-              <div class="col basis-1/3">
+              <div class="col basis-1/2 lg:basis-1/3">
                 <div class="card-team">
                   <div class="card-team__top">
                     <div class="card-team__image">
@@ -372,7 +372,7 @@
                   </div>
                 </div><!-- /.card-team -->
               </div>
-              <div class="col basis-1/3">
+              <div class="col basis-1/2 lg:basis-1/3">
                 <div class="card-team">
                   <div class="card-team__top">
                     <div class="card-team__image">
@@ -394,7 +394,7 @@
                   </div>
                 </div><!-- /.card-team -->
               </div>
-              <div class="col basis-1/3">
+              <div class="col basis-1/2 lg:basis-1/3">
                 <div class="card-team">
                   <div class="card-team__top">
                     <div class="card-team__image">
@@ -416,7 +416,7 @@
                   </div>
                 </div><!-- /.card-team -->
               </div>
-              <div class="col basis-1/3">
+              <div class="col basis-1/2 lg:basis-1/3">
                 <div class="card-team">
                   <div class="card-team__top">
                     <div class="card-team__image">
@@ -440,12 +440,12 @@
               </div>
             </div><!-- /.flex -->
           </div><!-- /.team-content -->
-          <div class="team-footer text-right mt-10">
+          <div class="team-footer text-right mt-4 lg:mt-10">
             <a href="#" class="btn btn-primary">See all team</a>
           </div>
         </div><!-- /.container -->
       </section><!-- /.team-block -->
-      <section class="testimonial-block py-16">
+      <section class="testimonial-block py-12 2xl:py-16">
         <div class="container">
           <div class="inline-heading">
             <h2>Testimonials</h2>
@@ -453,7 +453,7 @@
               Services</p>
           </div><!-- /.testimonial-header -->
           <div
-            class="testimonial-slider bg-black py-16 rounded-[2.8125rem] overflow-hidden [&_.slick-list]:-mx-[500px] [&_.slick-slide]:mx-4 [&_.slick-arrow]:bottom-[2.8125rem] [&_.slick-arrow]:top-auto [&_.slick-arrow]:bg-transparent [&_.slick-arrow]:after:border-white [&_.slick-arrow]:before:border-white [&_.slick-prev]:left-[25%] [&_.slick-next]:right-[25%]">
+            class="testimonial-slider bg-black  py-12 2xl:py-16 rounded-[2.8125rem] overflow-hidden [&_.slick-list]:-mx-[500px] [&_.slick-slide]:mx-4 [&_.slick-arrow]:bottom-[2.8125rem] [&_.slick-arrow]:top-auto [&_.slick-arrow]:bg-transparent [&_.slick-arrow]:after:border-white [&_.slick-arrow]:before:border-white [&_.slick-prev]:left-[25%] [&_.slick-next]:right-[25%]">
             <div class="testimonial-slider__item">
               <div class="card-testimonial">
                 <div class="card-testimonial__top">
@@ -527,13 +527,13 @@
           </div><!-- /.testimonial-slider -->
         </div><!-- /.container -->
       </section><!-- /.testimonial-block -->
-      <section class="contact-block py-16">
+      <section class="contact-block py-6 lg:py-12 xl:py-16">
         <div class="container">
           <div class="inline-heading">
             <h2>Contact Us</h2>
             <p>Connect with Us: Let's Discuss Your <br> Digital Marketing Needs</p>
           </div><!-- inline-heading -->
-          <div class="contact-content flex flex-wrap py-14 px-24 bg-tertiary rounded-[2.8125rem]">
+          <div class="contact-content overflow-hidden flex py-10 xl:py-12 2xl:py-14 px-12 xl:px-16 2xl:px-24 bg-tertiary rounded-[1.875rem] lg:rounded-[2.375rem] 2xl:rounded-[2.8125rem]">
             <div class="contact-form basis-[34.75rem] max-w-[34.75rem]">
               <form action="#" method="post" class="form">
                 <div class="form-radio">
@@ -569,7 +569,7 @@
                 </div><!-- /.form-group -->
               </form><!-- /.form -->
             </div><!-- /.contact-form -->
-            <div class="ml-auto -mr-24">
+            <div class="ml-auto max-xl:max-w-[17.875rem] -mr-20 2xl:-mr-24">
               <img src="./src/images/star-illustration.png" alt="Star">
             </div>
           </div>
@@ -578,7 +578,7 @@
     </main>
     <footer class="site-footer text-white">
       <div class="container">
-        <div class="bg-secondary rounded-tl-[2.8125rem] rounded-tr-[2.8125rem] py-12 px-14">
+        <div class="bg-secondary rounded-tl-[2.25rem] lg:rounded-tl-[2.8125rem] rounded-tr-[2.25rem] lg:rounded-tr-[2.8125rem] py-10 lg:py-12 px-9 lg:px-14">
           <div class="footer-content">
             <div class="footer-top mb-12">
               <div class="row">
@@ -588,7 +588,7 @@
                   </div><!-- /.footer-logo -->
                 </div>
                 <div class="col basis-1/2">
-                  <div class="footer-links text-center [&_li]:inline-block [&_li]:mx-3 [&_a]:underline hover:[&_a]:text-primary
+                  <div class="footer-links text-center [&_li]:inline-block [&_li]:mx-2 xl:[&_li]:mx-3 [&_a]:underline hover:[&_a]:text-primary
                   ">
                     <ul>
                       <li><a href="#">About Us</a></li>
@@ -633,7 +633,7 @@
             </div><!-- /.footer-top -->
             <div class="footer-main mb-9">
               <div class="row items-center">
-                <div class="col basis-[40%]">
+                <div class="col basis-full lg:basis-[40%]">
                   <div class="[&_h4]:mb-5 [&_h4]:inline-block [&_h4]:bg-primary [&_h4]:rounded-md [&_h4]:text-black
                   [&_h4]:px-3 [&_h4]:py-1 [&_li]:mb-5">
                     <h4>Contact Us</h4>
@@ -645,9 +645,9 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col basis-[60%]">
-                  <div class="bg-dark-100 px-10 py-14 rounded-2xl xl:ml-10">
-                    <form action="#" method="post" class="form flex items-center [&_.btn]:min-w-[auto] [&_.btn]:bg-primary [&_.btn]:text-black [&_input]:mr-4 [&_input]:bg-dark-100 [&_input]:text-white [&_input]:h-[4.1875rem] [&_input]:border [&_input]:border-white [&_input]:rounded-2xl [&_input]:px-7 [&_input]:py-3 [&_input]:placeholder:text-white">
+                <div class="col basis-full lg:basis-[60%]">
+                  <div class="bg-dark-100 px-6 2xl:px-10 py-10 2x:py-14 rounded-2xl xl:ml-10">
+                    <form action="#" method="post" class="form justify-center flex items-center [&_.btn]:min-w-[auto] [&_.btn]:bg-primary max-2xl:[&_.btn]:text-[1.0625rem] [&_.btn]:text-black [&_input]:mr-4 [&_input]:bg-dark-100 [&_input]:text-white [&_input]:h-[4.1875rem] [&_input]:border [&_input]:border-white [&_input]:rounded-2xl [&_input]:px-7 [&_input]:py-3 [&_input]:placeholder:text-white">
                       <input type="email" placeholder="Enter your email" name="email" required>
                       <button type="submit" class="btn btn-primary">Subscribe to news</button>
                     </form>
@@ -656,7 +656,7 @@
                 </div>
               </div>
             </div><!-- /.footer-main -->
-            <div class="footer-bottom pt-12 border-t border-t-white [&_a]:underline [&_a]:hover:text-primary">
+            <div class="footer-bottom pt-8 2xl:pt-12 border-t border-t-white [&_a]:underline [&_a]:hover:text-primary">
               <p>© 2023 Positivus. All Rights Reserved. <a href="#">Privacy Policy</a></p>
             </div>
           </div><!-- /.footer-content -->

@@ -4,11 +4,15 @@
 
 @layer base {
     body {
-        @apply font-space min-w-[320px] text-[1.125rem] leading-[1.35];
+        @apply font-space min-w-[320px] text-[0.9375rem] md:text-[1rem] xl:text-[1.125rem] leading-[1.35];
     }
 
     .container {
-        @apply !max-w-[1280px] px-4 mx-auto;
+        @apply !max-w-[23.4375rem] sm:!max-w-[35.9375rem] md:!max-w-[46.25rem] lg:!max-w-[61.875rem] xl:!max-w-[73.125rem] 2xl:!max-w-[1280px] px-4 mx-auto;
+    }
+
+    img {
+        @apply max-w-full h-auto w-full;
     }
 
     h1,
@@ -17,19 +21,19 @@
     h4,
     h5,
     h6 {
-        @apply font-medium;
+        @apply font-medium leading-[1.2];
     }
 
     h1 {
-        @apply text-6xl;
+        @apply text-[1.875rem] md:text-[2.25rem] lg:text-[2.5rem] xl:text-5xl 2xl:text-6xl;
     }
 
     h2 {
-        @apply text-[2.5rem];
+        @apply text-[1.75rem] lg:text-[2.125rem] xl:text-[2.5rem];
     }
 
     h3 {
-        @apply text-3xl;
+        @apply text-[1.875rem];
     }
 
     a {
@@ -41,7 +45,7 @@
 
     /* Buttons */
     .btn {
-        @apply bg-white text-xl min-w-60 py-4 px-5 text-center inline-flex justify-center items-center border border-black rounded-xl transition-all hover:bg-primary hover:text-black;
+        @apply bg-white text-[0.9375rem] lg:text-[1.0625rem] xl:text-xl min-w-[13.125rem] xl:min-w-60 py-4 px-5 text-center inline-flex justify-center items-center border border-black rounded-xl transition-all hover:bg-primary hover:text-black;
     }
 
     .btn-primary {
@@ -60,6 +64,14 @@
     /*header */
     .sticky-header {
         @apply shadow-lg;
+    }
+
+    /* Navigation */
+
+    @media (max-width: 991px) {
+        .site-header__nav {
+        @apply fixed left-0 w-[17.5rem] top-0 bottom-0 bg-black text-white [&_ul]:mt-20 [&_a]:block [&_a]:py-3 [&_a]:px-4 hidden;
+    }
     }
 
     /* Slick Slider */
@@ -97,7 +109,7 @@
     }
 
     .slick-dots {
-        @apply text-center mt-16 [&_li]:inline-block [&_li]:mx-1.5 [&_.slick-active_button]:border-b-primary [&_.slick-active_button]:before:border-b-primary [&_.slick-active_button]:after:border-b-primary;
+        @apply text-center text-[0] mt-16 [&_li]:inline-block [&_li]:mx-1.5 [&_.slick-active_button]:border-b-primary [&_.slick-active_button]:before:border-b-primary [&_.slick-active_button]:after:border-b-primary;
     }
 
     .slick-dots button {
@@ -106,27 +118,27 @@
 
     /* Headings */
     .inline-heading {
-        @apply flex items-center [&_h2]:inline-block [&_h2]:bg-primary [&_h2]:p-1.5 [&_h2]:rounded-lg [&_h2]:leading-[1] [&_h2]:mr-10 mb-11;
+        @apply flex items-center [&_h2]:inline-block [&_h2]:bg-primary [&_h2]:p-1.5 [&_h2]:rounded-lg [&_h2]:leading-[1] [&_h2]:mr-7 lg:[&_h2]:mr-10 mb-8 lg:mb-11;
     }
 
     /* Cards */
 
     /* Card CTA */
     .card-cta {
-        @apply bg-tertiary border border-black rounded-[2.8125rem] h-full p-12 shadow-[0_5px_0_0_#191A23] [&_h3]:mb-4 [&_h3]:text-[1.875rem] [&_h3_span]:inline-block [&_h3_span]:bg-primary [&_h3_span]:p-1 [&_h3_span]:rounded-lg transition-all [&_h3_span]:transition-all hover:bg-primary [&:hover_h3_span]:bg-white;
+        @apply bg-tertiary border border-black rounded-[1.875rem] xl:rounded-[2.375rem] 2xl:rounded-[2.8125rem] h-full p-6 lg:p-8 xl:p-10 shadow-[0_5px_0_0_#191A23] [&_h3]:mb-4 [&_h3]:text-[1.3125rem] lg:[&_h3]:text-[1.5rem] xl:[&_h3]:text-[1.875rem] [&_h3_span]:inline-block [&_h3_span]:bg-primary [&_h3_span]:p-1 [&_h3_span]:rounded-lg transition-all [&_h3_span]:transition-all hover:bg-primary [&:hover_h3_span]:bg-white;
     }
 
     .card-cta__content {
-        @apply flex flex-col h-full;
+        @apply flex flex-col h-full pr-4;
     }
 
     .card-cta a {
-        @apply inline-flex items-center mt-auto [&_svg]:bg-black [&_svg]:text-primary [&_svg]:rounded-full [&_svg]:p-2 [&_svg]:w-10 [&_svg]:h-10 [&_svg]:mr-2;
+        @apply inline-flex items-center mt-auto [&_svg]:bg-black [&_svg]:text-primary [&_svg]:rounded-full [&_svg]:p-2 [&_svg]:w-8 2xl:[&_svg]:w-10 [&_svg]:h-8 2xl:[&_svg]:h-10 [&_svg]:mr-2;
     }
 
     /* Card Team */
     .card-team {
-        @apply border border-black rounded-[2.8125rem] overflow-hidden relative shadow-[0_5px_0_0_#191A23] mb-7 py-10 px-9 h-full;
+        @apply border border-black rounded-[1.875rem] xl:rounded-[2.8125rem] overflow-hidden relative shadow-[0_5px_0_0_#191A23] py-8 xl:py-10 px-7 xl:px-9 h-full;
     }
 
     .card-team__top {
@@ -149,15 +161,15 @@
 
     .card-testimonial__top:after,
     .card-testimonial__top:before {
-        @apply content-[''] absolute bg-primary w-8 h-8 rotate-45 top-full -mt-4;
+        @apply content-[''] absolute bg-primary w-6 lg:w-8 h-6 lg:h-8 rotate-45 top-full -mt-3 lg:-mt-4;
     }
 
     .card-testimonial__top {
-        @apply border border-primary rounded-[2.8125rem] text-white p-11 relative bg-black before:bg-black before:border-0 before:-mt-[1.0625rem] before:z-10 mb-10;
+        @apply border border-primary rounded-[2.25rem] lg:rounded-[2.8125rem] text-white p-8 lg:p-11 relative bg-black before:bg-black before:border-0 before:-mt-[0.8625rem] lg:before:-mt-[1.0625rem] before:z-10 mb-10;
     }
 
     .card-testimonial__bottom {
-        @apply text-white ml-[3.75rem] [&_h5]:text-primary;
+        @apply text-white ml-[2.75rem] lg:ml-[3.75rem] [&_h5]:text-primary;
     }
 
     /* Accordion */
@@ -167,7 +179,7 @@
 
     .accordion-count {
         counter-increment: list-counter;
-        @apply text-[3.75rem] text-black font-medium mr-4;
+        @apply text-[2.375rem] lg:text-[2.625rem] xl:text-[3rem] 2xl:text-[3.75rem] text-black font-medium mr-4;
     }
 
     .accordion-count:before {
@@ -175,7 +187,7 @@
     }
 
     .accordion-item {
-        @apply border border-black rounded-[2.8125rem] overflow-hidden relative shadow-[0_5px_0_0_#191A23] mb-7 py-10 px-14;
+        @apply border border-black rounded-[1.875rem] xl:rounded-[45px] overflow-hidden relative shadow-[0_5px_0_0_#191A23] mb-7 py-6 xl:py-10 px-8 xl:px-12 2xl:px-14;
     }
 
     .accordion-item.active {
@@ -183,20 +195,20 @@
     }
 
     .accordion-content {
-        @apply pt-7 border-t border-black hidden;
+        @apply pt-5 lg:pt-7 border-t border-black hidden;
     }
 
     .accordion-header {
-        @apply text-[1.875rem] text-black font-medium flex items-center w-full mb-2 pr-20 after:content-[''] after:inset-0 after:absolute after:z-10;
+        @apply text-[1.5rem] xl:text-[1.875rem] text-black font-medium flex items-center w-full mb-2 pr-20 after:content-[''] after:inset-0 after:absolute after:z-10;
     }
 
     .accordion-icon {
-        @apply w-14 h-14 absolute right-14 top-[3.25rem] border border-black rounded-full;
+        @apply w-8 lg:w-10 xl:w-12 2xl:w-14 h-8 lg:h-10 xl:h-12 2xl:h-14 absolute right-8 xl:right-14 top-8 xl:top-[3.25rem] border border-black rounded-full;
     }
 
     .accordion-icon:before,
     .accordion-icon:after {
-        @apply content-[''] w-4 border-t-4 border-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all;
+        @apply content-[''] w-3 lg:w-4 border-t-[0.1875rem] xl:border-t-4 border-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all;
     }
 
     .accordion-icon:after {
@@ -211,11 +223,11 @@
 
     .contact-form .form-group input,
     .contact-form .form-group textarea {
-        @apply w-full h-[3.6875rem] rounded-[0.875rem] border border-black py-3 px-7;
+        @apply w-full h-[3.125rem] lg:h-[3.6875rem] rounded-[0.875rem] border border-black py-3 px-5 lg:px-7;
     }
 
     .contact-form .form-group textarea {
-        @apply min-h-[11.875rem] resize-none;
+        @apply min-h-[8rem] lg:min-h-[11.875rem] resize-none;
     }
 
     .contact-form .form-radio {

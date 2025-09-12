@@ -3,6 +3,13 @@ module.exports = {
     content: ['./index.html', './src/**/*.{js,ts}'],
     theme: {
         extend: {
+            screens: {
+                sm: '576px',  // Small screens
+                md: '768px',  // Medium screens
+                lg: '992px', // Large screens
+                xl: '1280px', // Extra large
+                '2xl': '1440px',
+            },
             fontFamily: {
                 space: ['Space Grotesk', 'sans-serif'],
             },

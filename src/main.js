@@ -10,10 +10,38 @@ $(document).ready(() => {
         arrows: false,
         pauseOnHover: false,
         pauseOnFocus: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+        ]
     });
 
     $('.cta-slider').slick({
         slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+        ]
     });
 
     $('.testimonial-slider').slick({
