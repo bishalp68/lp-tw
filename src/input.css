@@ -29,7 +29,7 @@
     }
 
     h2 {
-        @apply text-[1.75rem] lg:text-[2.125rem] xl:text-[2.5rem];
+        @apply text-[1.5rem] sm:text-[1.75rem] lg:text-[2.125rem] xl:text-[2.5rem];
     }
 
     h3 {
@@ -113,12 +113,12 @@
     }
 
     .slick-dots button {
-        @apply relative mx-auto w-0 h-0 border-x-[10px] border-x-transparent border-b-[7px] border-b-white rotate-[35deg] before:content-[''] before:absolute before:top-[-4.5px] before:left-[-6.5px] before:w-0 before:h-0 before:border-x-[3px] before:border-x-transparent before:border-b-[8px] before:border-b-white before:rotate-[-35deg] after:content-[''] after:absolute after:top-[0.3px] after:left-[-10.5px] after:w-0 after:h-0 after:border-x-[10px] after:border-x-transparent after:border-b-[7px] after:border-b-white after:rotate-[-70deg];
+        @apply relative mx-auto w-0 h-0 border-x-[0.625rem] border-x-transparent border-b-[7px] border-b-white rotate-[35deg] before:content-[''] before:absolute before:top-[-4.5px] before:left-[-6.5px] before:w-0 before:h-0 before:border-x-[3px] before:border-x-transparent before:border-b-[8px] before:border-b-white before:rotate-[-35deg] after:content-[''] after:absolute after:top-[0.3px] after:left-[-10.5px] after:w-0 after:h-0 after:border-x-[10px] after:border-x-transparent after:border-b-[7px] after:border-b-white after:rotate-[-70deg];
     }
 
     /* Headings */
     .inline-heading {
-        @apply flex items-center [&_h2]:inline-block [&_h2]:bg-primary [&_h2]:p-1.5 [&_h2]:rounded-lg [&_h2]:leading-[1] [&_h2]:mr-7 lg:[&_h2]:mr-10 mb-8 lg:mb-11;
+        @apply max-sm:text-center sm:flex sm:items-center max-sm:[&_h2]:mb-3 [&_h2]:inline-block [&_h2]:bg-primary [&_h2]:p-1.5 [&_h2]:rounded-lg [&_h2]:leading-[1] [&_h2]:mr-7 lg:[&_h2]:mr-10 mb-8 lg:mb-11 max-sm:[&_br]:hidden;
     }
 
     /* Cards */
