@@ -70,8 +70,28 @@
 
     @media (max-width: 991px) {
         .site-header__nav {
-        @apply fixed left-0 w-[17.5rem] top-0 bottom-0 bg-black text-white [&_ul]:mt-20 [&_a]:block [&_a]:py-3 [&_a]:px-4 hidden;
+        @apply fixed -left-full transition-all w-full sm:w-[17.5rem] top-0 bottom-0 bg-black text-white [&_ul]:mt-20 [&_a]:block [&_a]:py-3 [&_a]:px-4;
     }
+
+        .site-header__nav.active {
+            @apply left-0;
+        }
+    }
+
+    .nav-toggle__bar {
+        @apply block w-6 h-0.5 bg-black my-[0.125rem] transition-all;
+    }
+
+    .nav-toggle__bar:nth-child(1) {
+        @apply h-2.5 rounded-tr-full rounded-tl-full bg-primary border border-black;
+    }
+
+    .nav-toggle__bar:nth-child(3) {
+        @apply h-1.5 rounded-br-[4px] rounded-bl-[4px] bg-primary border border-black;
+    }   
+
+    .nav-toggle.active .nav-toggle__bar:nth-child(1) {
+        @apply rotate-12 translate-x-[2px] -translate-y-[2px];
     }
 
     /* Slick Slider */
@@ -89,15 +109,15 @@
 
     .slick-prev,
     .slick-next {
-        @apply absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white text-black rounded-full flex items-center justify-center text-[0];
+        @apply absolute top-1/2 -translate-y-1/2 z-10 w-9 md:w-10 h-9 md:h-10 bg-white text-black rounded-full flex items-center justify-center text-[0];
     }
 
     .slick-arrow::before {
-        @apply content-[''] border-black border-t-2 border-r-2 w-4 h-4 rotate-45;
+        @apply content-[''] border-black border-t-2 border-r-2 w-3 md:w-4 h-3 md:h-4 rotate-45;
     }
 
     .slick-arrow::after {
-        @apply content-[''] border-black border-t-2 w-5 absolute left-2.5;
+        @apply content-[''] border-black border-t-2 w-4 md:w-5 absolute left-2.5;
     }
 
     .slick-prev {
@@ -109,7 +129,7 @@
     }
 
     .slick-dots {
-        @apply text-center text-[0] mt-16 [&_li]:inline-block [&_li]:mx-1.5 [&_.slick-active_button]:border-b-primary [&_.slick-active_button]:before:border-b-primary [&_.slick-active_button]:after:border-b-primary;
+        @apply text-center text-[0] mt-6 sm:mt-8 md:mt-12 lg:mt-16 [&_li]:inline-block [&_li]:mx-1.5 [&_.slick-active_button]:border-b-primary [&_.slick-active_button]:before:border-b-primary [&_.slick-active_button]:after:border-b-primary;
     }
 
     .slick-dots button {
@@ -118,14 +138,14 @@
 
     /* Headings */
     .inline-heading {
-        @apply max-sm:text-center sm:flex sm:items-center max-sm:[&_h2]:mb-3 [&_h2]:inline-block [&_h2]:bg-primary [&_h2]:p-1.5 [&_h2]:rounded-lg [&_h2]:leading-[1] [&_h2]:mr-7 lg:[&_h2]:mr-10 mb-8 lg:mb-11 max-sm:[&_br]:hidden;
+        @apply max-md:text-center md:flex md:items-center max-md:[&_h2]:mb-3 [&_h2]:inline-block [&_h2]:bg-primary [&_h2]:p-1.5 [&_h2]:rounded-lg [&_h2]:leading-[1] md:[&_h2]:mr-7 lg:[&_h2]:mr-10 mb-8 lg:mb-11 max-sm:[&_br]:hidden;
     }
 
     /* Cards */
 
     /* Card CTA */
     .card-cta {
-        @apply bg-tertiary border border-black rounded-[1.875rem] xl:rounded-[2.375rem] 2xl:rounded-[2.8125rem] h-full p-6 lg:p-8 xl:p-10 shadow-[0_5px_0_0_#191A23] [&_h3]:mb-4 [&_h3]:text-[1.3125rem] lg:[&_h3]:text-[1.5rem] xl:[&_h3]:text-[1.875rem] [&_h3_span]:inline-block [&_h3_span]:bg-primary [&_h3_span]:p-1 [&_h3_span]:rounded-lg transition-all [&_h3_span]:transition-all hover:bg-primary [&:hover_h3_span]:bg-white;
+        @apply flex max-lg:flex-col-reverse max-lg:text-center bg-tertiary border border-black rounded-[1.25rem] sm:rounded-[1.875rem] xl:rounded-[2.375rem] 2xl:rounded-[2.8125rem] h-full p-6 lg:p-8 xl:p-10 shadow-[0_5px_0_0_#191A23] [&_h3]:mb-4 [&_h3]:text-[1.3125rem] lg:[&_h3]:text-[1.5rem] xl:[&_h3]:text-[1.875rem] [&_h3_span]:inline-block [&_h3_span]:bg-primary [&_h3_span]:p-1 [&_h3_span]:rounded-lg transition-all [&_h3_span]:transition-all hover:bg-primary [&:hover_h3_span]:bg-white [&_figure]:mb-4 [&_figure]:min-h-[10.5rem] md:[&_figure]:min-h-[12.5rem] [&_img]:max-h-[10.5rem] md:[&_img]:max-h-[12.5rem] [&_img]:w-auto [&_img]:mx-auto;
     }
 
     .card-cta__content {
@@ -133,7 +153,7 @@
     }
 
     .card-cta a {
-        @apply inline-flex items-center mt-auto [&_svg]:bg-black [&_svg]:text-primary [&_svg]:rounded-full [&_svg]:p-2 [&_svg]:w-8 2xl:[&_svg]:w-10 [&_svg]:h-8 2xl:[&_svg]:h-10 [&_svg]:mr-2;
+        @apply inline-flex items-center max-lg:justify-center mt-auto [&_svg]:bg-black [&_svg]:text-primary [&_svg]:rounded-full [&_svg]:p-2 [&_svg]:w-7 lg:[&_svg]:w-8 2xl:[&_svg]:w-10 [&_svg]:h-7 lg:[&_svg]:h-8 2xl:[&_svg]:h-10 [&_svg]:mr-2;
     }
 
     /* Card Team */
@@ -161,11 +181,11 @@
 
     .card-testimonial__top:after,
     .card-testimonial__top:before {
-        @apply content-[''] absolute bg-primary w-6 lg:w-8 h-6 lg:h-8 rotate-45 top-full -mt-3 lg:-mt-4;
+        @apply content-[''] absolute bg-primary w-4 md:w-6 lg:w-8 h-4 md:h-6 lg:h-8 rotate-45 top-full -mt-2 md:-mt-3 lg:-mt-4;
     }
 
     .card-testimonial__top {
-        @apply border border-primary rounded-[2.25rem] lg:rounded-[2.8125rem] text-white p-8 lg:p-11 relative bg-black before:bg-black before:border-0 before:-mt-[0.8625rem] lg:before:-mt-[1.0625rem] before:z-10 mb-10;
+        @apply border border-primary rounded-[1.25rem] sm:rounded-[2.25rem] lg:rounded-[2.8125rem] text-white p-4 sm:p-8 lg:p-11 relative bg-black before:bg-black before:border-0 before:-mt-2.5 md:before:-mt-[0.8625rem] lg:before:-mt-[1.0625rem] before:z-10 mb-10;
     }
 
     .card-testimonial__bottom {
@@ -179,7 +199,7 @@
 
     .accordion-count {
         counter-increment: list-counter;
-        @apply text-[2.375rem] lg:text-[2.625rem] xl:text-[3rem] 2xl:text-[3.75rem] text-black font-medium mr-4;
+        @apply text-[1.5rem] sm:text-[2rem] md:text-[2.125rem] lg:text-[2.625rem] xl:text-[3rem] 2xl:text-[3.75rem] text-black font-medium mr-2 sm:mr-4;
     }
 
     .accordion-count:before {
@@ -187,7 +207,7 @@
     }
 
     .accordion-item {
-        @apply border border-black rounded-[1.875rem] xl:rounded-[45px] overflow-hidden relative shadow-[0_5px_0_0_#191A23] mb-7 py-6 xl:py-10 px-8 xl:px-12 2xl:px-14;
+        @apply border border-black rounded-[1.25rem] md:rounded-[1.875rem] xl:rounded-[45px] overflow-hidden relative shadow-[0_5px_0_0_#191A23] mb-7 py-4 md:py-6 xl:py-10 px-4 md:px-8 xl:px-12 2xl:px-14;
     }
 
     .accordion-item.active {
@@ -199,16 +219,16 @@
     }
 
     .accordion-header {
-        @apply text-[1.5rem] xl:text-[1.875rem] text-black font-medium flex items-center w-full mb-2 pr-20 after:content-[''] after:inset-0 after:absolute after:z-10;
+        @apply text-[1.125rem] sm:text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] xl:text-[1.875rem] text-left text-black font-medium flex items-center w-full mb-2 pr-12 lg:pr-20 after:content-[''] after:inset-0 after:absolute after:z-10;
     }
 
     .accordion-icon {
-        @apply w-8 lg:w-10 xl:w-12 2xl:w-14 h-8 lg:h-10 xl:h-12 2xl:h-14 absolute right-8 xl:right-14 top-8 xl:top-[3.25rem] border border-black rounded-full;
+        @apply w-6 md:w-8 lg:w-10 xl:w-12 2xl:w-14 h-6 md:h-8 lg:h-10 xl:h-12 2xl:h-14 absolute right-4 md:right-8 xl:right-14 top-6 xl:top-[3.25rem] border border-black rounded-full;
     }
 
     .accordion-icon:before,
     .accordion-icon:after {
-        @apply content-[''] w-3 lg:w-4 border-t-[0.1875rem] xl:border-t-4 border-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all;
+        @apply content-[''] w-3 lg:w-4 border-t-[2px] md:border-t-[0.1875rem] xl:border-t-4 border-black absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all;
     }
 
     .accordion-icon:after {
@@ -223,7 +243,7 @@
 
     .contact-form .form-group input,
     .contact-form .form-group textarea {
-        @apply w-full h-[3.125rem] lg:h-[3.6875rem] rounded-[0.875rem] border border-black py-3 px-5 lg:px-7;
+        @apply w-full h-[3.125rem] lg:h-[3.6875rem] rounded-lg sm:rounded-[0.875rem] border border-black py-3 px-4 sm:px-5 lg:px-7;
     }
 
     .contact-form .form-group textarea {
@@ -231,7 +251,7 @@
     }
 
     .contact-form .form-radio {
-        @apply mb-8 [&_li]:inline-block [&_li]:mr-6;
+        @apply mb-3 md:mb-6 [&_li]:inline-block [&_li]:mr-4 md:[&_li]:mr-6 [&_li]:mb-2;
     }
 
     /* Hide native radio */
@@ -243,21 +263,21 @@
     /* Label styling */
     .contact-form input[type="radio"]:checked+label,
     .contact-form input[type="radio"]:not(:checked)+label {
-        @apply relative pl-[2.5rem] cursor-pointer leading-5 inline-block text-gray-600;
+        @apply relative pl-7 md:pl-10 cursor-pointer leading-5 inline-block text-gray-600;
     }
 
     /* Outer circle */
     .contact-form input[type="radio"]:checked+label::before,
     .contact-form input[type="radio"]:not(:checked)+label::before {
         content: '';
-        @apply absolute left-0 -top-[0.125rem] w-[1.75rem] h-[1.75rem] border border-black rounded-full;
+        @apply absolute left-0 -top-[0.125rem] w-[1.25rem] md:w-[1.75rem] h-[1.25rem] md:h-[1.75rem] border border-black rounded-full;
     }
 
     /* Inner dot base style */
     .contact-form input[type="radio"]:checked+label::after,
     .contact-form input[type="radio"]:not(:checked)+label::after {
         content: '';
-        @apply w-4 h-4 bg-primary absolute top-1 left-1.5 rounded-full transition-all duration-200 ease-in-out;
+        @apply w-3 md:w-4 h-3 md:h-4 bg-primary absolute top-[0.125rem] md:top-1 left-1 md:left-1.5 rounded-full transition-all duration-200 ease-in-out;
     }
 
     /* Hidden dot when not checked */

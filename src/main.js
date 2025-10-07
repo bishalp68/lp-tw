@@ -42,10 +42,13 @@ $(document).ready(() => {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
                 }
             },
         ]
@@ -54,6 +57,16 @@ $(document).ready(() => {
     $('.testimonial-slider').slick({
         slidesToShow: 3,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                }
+            },
+        ]
     });
 
     //accordion
@@ -105,4 +118,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("resize", adjustContentMargin);
     window.addEventListener("scroll", handleScroll);
+
+    const navBtn = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".site-header__nav");
+
+    navBtn.addEventListener("click", function(){
+        this.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    });
 });
